@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from 'react-router-dom';
+import NginxIcon from './icons/nginx.svg';
+import './App.less';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Link to="/nginx">
+        <div className="conf-entry">
+          <img className="conf-entry-logo" src={NginxIcon} alt="nginx" />
+          <span className="conf-entry-name">Nginx</span>
+        </div>
+      </Link>
     </div>
   );
 }
